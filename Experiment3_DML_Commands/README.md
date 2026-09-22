@@ -1,169 +1,154 @@
-# Experiment 3: DML Commands
-
-## AIM
+Skip to content
+MonikaVenkatesan25
+19CS404-DBMS-Lab-Manual
+Repository navigation
+Code
+Pull requests
+Actions
+Projects
+Security and quality
+Insights
+19CS404-DBMS-Lab-Manual
+/Experiment3_DML_Commands/
+Go to file
+t
+T
+MonikaVenkatesan25
+MonikaVenkatesan25
+Update README.md
+b73c776
+ · 
+last month
+This branch is 10 commits ahead of abinaya-g/19CS404-DBMS-Lab-Manual:main.
+19CS404-DBMS-Lab-Manual
+/Experiment3_DML_Commands/
+Name	Last commit message	Last commit date
+..
+README.md
+Update README.md
+last month
+README.md
+Experiment 3: DML Commands
+AIM
 To study and implement DML (Data Manipulation Language) commands.
 
-## THEORY
+THEORY
+1. INSERT INTO
+Used to add records into a relation. These are three type of INSERT INTO queries which are as A)Inserting a single record Syntax (Single Row):
 
-### 1. INSERT INTO
-Used to add records into a relation.
-These are three type of INSERT INTO queries which are as
-A)Inserting a single record
-**Syntax (Single Row):**
-```sql
 INSERT INTO table_name (field_1, field_2, ...) VALUES (value_1, value_2, ...);
-```
-**Syntax (Multiple Rows):**
-```sql
+Syntax (Multiple Rows):
+
 INSERT INTO table_name (field_1, field_2, ...) VALUES
 (value_1, value_2, ...),
 (value_3, value_4, ...);
-```
-**Syntax (Insert from another table):**
-```sql
+Syntax (Insert from another table):
+
 INSERT INTO table_name SELECT * FROM other_table WHERE condition;
-```
-### 2. UPDATE
-Used to modify records in a relation.
-Syntax:
-```sql
+2. UPDATE
+Used to modify records in a relation. Syntax:
+
 UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
-```
-### 3. DELETE
-Used to delete records from a relation.
-**Syntax (All rows):**
-```sql
+3. DELETE
+Used to delete records from a relation. Syntax (All rows):
+
 DELETE FROM table_name;
-```
-**Syntax (Specific condition):**
-```sql
+Syntax (Specific condition):
+
 DELETE FROM table_name WHERE condition;
-```
-### 4. SELECT
-Used to retrieve records from a table.
-**Syntax:**
-```sql
+4. SELECT
+Used to retrieve records from a table. Syntax:
+
 SELECT column1, column2 FROM table_name WHERE condition;
-```
-**Question 1**
---
--- Paste Question 1 here
+Question 1
+image
+update suppliers
+set address='58 Lakeview, Magnolia'
+where supplier_id=5;
+Output:
 
-```sql
--- Paste your SQL code below for Question 1
-```
+image
+Question 2
+image
+SELECT *
+FROM orders
+WHERE NOT (
+        ord_date = '2012-08-17'
+        OR (customer_id > 3005 AND purch_amt < 1000)
+      );
+Output:
 
-**Output:**
+image
+Question 3
+image
+delete from customer
+where CUST_CITY <> 'New York' and OUTSTANDING_AMT>5000;
+Output:
 
-![Output1](output.png)
+image
+Question 4
+image
+UPDATE products
+SET reorder_lvl = 20
+WHERE quantity < 10
+AND category = 'Snacks';
+Output:
 
-**Question 2**
----
--- Paste Question 2 here
+image
+Question 5
+image
+DELETE FROM customer
+WHERE WORKING_AREA = 'New York';
+Output:
 
-```sql
--- Paste your SQL code below for Question 2
-```
+image
+Question 6
+image
+UPDATE employees
+SET salary = salary + 500,
+    email = 'updated'
+WHERE job_id = 'SA_REP'
+  AND commission_pct > 0.15;
+Output:
 
-**Output:**
+image
+Question 7
+image
+SELECT CategoryName, Description
+FROM Categories
+ORDER BY CategoryName;
+Output:
 
-![Output2](output.png)
+image
+Question 8
+image
+SELECT 
+    ename,
+    CAST((julianday('2024-08-30') - julianday(hiredate)) / 365.25 AS INTEGER) AS Tenure
+FROM emp;
+Output:
 
-**Question 3**
----
--- Paste Question 3 here
+image
+Question 9
+image
+SELECT 
+    product_id,
+    original_price,
+    discount_percentage,
+    tax_rate,
+    (original_price * (1 - discount_percentage) * (1 + tax_rate)) AS final_price
+FROM Products;
+Output:
 
-```sql
--- Paste your SQL code below for Question 3
-```
+image
+Question 10
+image
+SELECT SUBSTR(EmpLname, 1, 4)
+FROM EmployeeInfo;
+Output:
 
-**Output:**
-
-![Output3](output.png)
-
-**Question 4**
----
--- Paste Question 4 here
-
-```sql
--- Paste your SQL code below for Question 4
-```
-
-**Output:**
-
-![Output4](output.png)
-
-**Question 5**
----
--- Paste Question 5 here
-
-```sql
--- Paste your SQL code below for Question 5
-```
-
-**Output:**
-
-![Output5](output.png)
-
-**Question 6**
----
--- Paste Question 6 here
-
-```sql
--- Paste your SQL code below for Question 6
-```
-
-**Output:**
-
-![Output6](output.png)
-
-**Question 7**
----
--- Paste Question 7 here
-
-```sql
--- Paste your SQL code below for Question 7
-```
-
-**Output:**
-
-![Output7](output.png)
-
-**Question 8**
----
--- Paste Question 8 here
-
-```sql
--- Paste your SQL code below for Question 8
-```
-
-**Output:**
-
-![Output8](output.png)
-
-**Question 9**
----
--- Paste Question 9 here
-
-```sql
--- Paste your SQL code below for Question 9
-```
-
-**Output:**
-
-![Output9](output.png)
-
-**Question 10**
----
--- Paste Question 10 here
-
-```sql
--- Paste your SQL code below for Question 10
-```
-
-**Output:**
-
-![Output10](output.png)
-
-## RESULT
+image
+RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
+
+ 
