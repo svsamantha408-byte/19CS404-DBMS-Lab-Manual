@@ -1,33 +1,3 @@
-Skip to content
-MonikaVenkatesan25
-19CS404-DBMS-Lab-Manual
-Repository navigation
-Code
-Pull requests
-Actions
-Projects
-Security and quality
-Insights
-19CS404-DBMS-Lab-Manual
-/Experiment3_DML_Commands/
-Go to file
-t
-T
-MonikaVenkatesan25
-MonikaVenkatesan25
-Update README.md
-b73c776
- · 
-last month
-This branch is 10 commits ahead of abinaya-g/19CS404-DBMS-Lab-Manual:main.
-19CS404-DBMS-Lab-Manual
-/Experiment3_DML_Commands/
-Name	Last commit message	Last commit date
-..
-README.md
-Update README.md
-last month
-README.md
 Experiment 3: DML Commands
 AIM
 To study and implement DML (Data Manipulation Language) commands.
@@ -150,5 +120,3 @@ Output:
 image
 RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
-
- 
